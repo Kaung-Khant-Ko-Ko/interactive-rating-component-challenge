@@ -70,10 +70,31 @@ p {
   border-radius: 50%;
 }
 
+.rating:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.selected {
+  background-color: hsl(217, 12%, 63%);
+  color: hsl(0, 0%, 100%);
+}
+
 #submit-btn {
   height: 45px;
   background-color: hsl(25, 97%, 53%);
   border-radius: 30px;
+
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: hsl(0, 0%, 100%);
+}
+
+#submit-btn:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+  cursor: pointer;
 }
 
 #thankyou-state {
@@ -84,7 +105,6 @@ p {
   border-radius: 30px;
 
   position: absolute;
-  z-index: -1;
 
   display: flex;
   flex-direction: column;
@@ -93,12 +113,16 @@ p {
   text-align: center;
 }
 
+.hide {
+  z-index: -1;
+}
+
 #illu {
   width: 162px;
 }
 
 #rating-result {
-  width: 50%;
+  padding: 5px 25px;
   text-align: center;
   background-color: hsl(219, 15%, 19%);
   color: hsl(25, 97%, 53%);
@@ -110,4 +134,18 @@ p {
   font-weight: 700;
   margin: 20px 0px;
   color: hsl(0, 0%, 100%);
+}
+
+@media (max-width: 480px) {
+  #rating-state {
+    max-width: 300px;
+    height: 350px;
+    padding: 20px;
+  }
+
+  #thankyou-state {
+    max-width: 300px;
+    height: 330px;
+    padding: 30px 20px;
+  }
 }
